@@ -10756,10 +10756,10 @@ kubectl get pod -w</code></pre>
 <p><a href="https://strimzi.io/2019/10/25/kafka-authentication-using-oauth-2.0.html" target="_blank" rel="noopener">Kafka authentication using OAuth 2.0</a></p>
 </li>
 <li>
-<p><a href="https://github.com/strimzi/strimzi-kafka-oauth/tree//examples" target="_blank" rel="noopener">Using Keycloak as the OAuth 2.0 authorization server</a></p>
+<p><a href="https://github.com/strimzi/strimzi-kafka-oauth/tree/0.8.1/examples" target="_blank" rel="noopener">Using Keycloak as the OAuth 2.0 authorization server</a></p>
 </li>
 <li>
-<p><a href="https://github.com/strimzi/strimzi-kafka-oauth/tree//examples/docker#running-with-hydra-using-ssl-and-opaque-tokens" target="_blank" rel="noopener">Using Hydra as the OAuth 2.0 authorization server</a></p>
+<p><a href="https://github.com/strimzi/strimzi-kafka-oauth/tree/0.8.1/examples/docker#running-with-hydra-using-ssl-and-opaque-tokens" target="_blank" rel="noopener">Using Hydra as the OAuth 2.0 authorization server</a></p>
 </li>
 </ul>
 </div>
@@ -19575,7 +19575,7 @@ where <em>DATE</em> is the certificate expiry date in the format <em>YEAR-MONTH-
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">mv ca.crt ca-$(date -u -d$(openssl x509 -enddate -noout -in ca.crt | sed 's/.*=//') +'%Y-%m-%dT%H-%M-%SZ').crt</code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">mv ca.crt ca-$(date -u -d"$(openssl x509 -enddate -noout -in ca.crt | sed 's/.*=//')" +'%Y-%m-%dT%H-%M-%SZ').crt</code></pre>
 </div>
 </div>
 </li>
@@ -37794,7 +37794,7 @@ You can also <a href="#con-common-configuration-ssl-reference">configure the <co
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-12-06 00:34:59 UTC
+Last updated 2021-12-10 00:13:33 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
